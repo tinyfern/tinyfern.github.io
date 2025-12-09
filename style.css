@@ -26,8 +26,8 @@ header {
 
 img {
   /* aspect-ratio: ; */
-  width: 80%px;
-  height: 80%px;;
+  width: 80%;
+  height: 80%;;
 }
 
 .page-header {
@@ -56,7 +56,7 @@ body {
     background-color: var(--darkGrayBlue);
     color: var(--darkGrayBlue);
     font-family: Nunito, sans-serif;
-    font-display: swap;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
