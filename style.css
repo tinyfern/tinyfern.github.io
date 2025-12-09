@@ -65,7 +65,7 @@ body {
     min-height: 100vh;
 }
 
-@media (min-width:700px) {
+@media (min-width:600px) {
 
     .portfolio-container {
         flex-direction: row;
@@ -78,9 +78,9 @@ body {
     }
 
     .grid {
-        flex: 3;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
 }
 
@@ -147,9 +147,64 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
+
+.grid > :first-child {
+    grid-column: span 2;
+}
+
+.grid img, .art-grid img{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+.art-grid {
+  flex: 1;
+  display: grid;
+  gap: 20px;
+  padding: 10px;
+
+  /* 1–3 per row depending on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.art-grid .card {
+  background: var(--pastelGrayOrange, #f4f4f4);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.art-grid .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.art-link {
+    text-decoration: none;
+    color: var(--darkGrayBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.art-link img {
+    width: 100%;
+    max-height: 200px;   /* adjust to make image smaller */
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+}
+
 
 .portfolio-container {
     display: flex;
@@ -290,11 +345,8 @@ body {
     flex: 1;
     max-width: 250px;
   }
-
   .grid {
-    flex: 3;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .card {
@@ -314,9 +366,22 @@ body {
     max-width: 280px;
   }
 
-  .grid {
-    grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: repeat(2, 1fr);
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.grid > :first-child {
+    grid-column: span 2;
+}
+
+  .about-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-grid > :first-child {
+    grid-column: span 3;
   }
 
   .card {
