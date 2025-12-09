@@ -381,15 +381,19 @@ body {
 }
 
   .about-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-grid > :first-child {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .card {
     font-size: 1.1rem;
     padding: 2rem 1.5rem;
+  }
+
+  .contact-form {
+    grid-column: span 3;
   }
 }
