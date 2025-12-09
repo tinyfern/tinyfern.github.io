@@ -183,7 +183,11 @@ body {
 
 .art-grid .card img {
   width: 100%;
+  max-width: 250px;
   height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
   border-radius: 10px;
 }
 
